@@ -51,7 +51,7 @@
   </main>
   <div class="toast" id="toast">Contato pronto para salvar.</div>
 <script>
-const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:do Ju;Barbearia;;;\nFN:Barbearia do Ju\nORG:Barbearia do Ju\nTITLE:Barbeiro Proprietário\nTEL;TYPE=CELL,WORK:+5511967073038\nADR;TYPE=WORK:;;Rua Dr. Antônio da Cruz, 482;Bragança Paulista;SP;12900350;Brasil\nURL:https://linktr.ee/barbeariadoju\nNOTE:Barbearia do Ju | Cortes masculinos, barba, barboterapia e atendimento personalizado. Ambiente climatizado, café e Wi-Fi para clientes. Atendimento: terça a sexta das 08h30 às 18h00 e sábado das 08h30 às 14h00. Agende pelo WhatsApp!\nEND:VCARD`;
+const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:do Ju;Barbearia;;;\nFN:Barbearia do Ju\nORG:Barbearia do Ju\nTITLE:Barbeiro Proprietário\nTEL;TYPE=CELL,WORK:+5511967073038\nADR;TYPE=WORK:;;Rua Dr. Antônio da Cruz, 482;Bragança Paulista;SP;12900350;Brasil\nURL:https://linktr.ee/barbeariadoju_\nNOTE:Barbearia do Ju | Cortes masculinos, barba, barboterapia e atendimento personalizado. Ambiente climatizado, café e Wi-Fi para clientes. Atendimento: terça a sexta das 08h30 às 18h00 e sábado das 08h30 às 14h00. Agende pelo WhatsApp!\nEND:VCARD`;
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 const isAndroid = /Android/.test(navigator.userAgent);
 if (isIOS) document.getElementById('iosHelp').classList.add('show');
