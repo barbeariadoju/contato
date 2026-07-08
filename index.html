@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Contato oficial | Barbearia do Ju</title>
+  <meta name="description" content="Salve o contato oficial da Barbearia do Ju no seu celular e acesse nossos canais." />
+  <style>
+    :root{--bg:#090909;--card:#151515;--gold:#d6ad5a;--gold2:#f2d28a;--text:#f7f2e8;--muted:#b8b0a4;--line:rgba(214,173,90,.25)}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top,#282014 0,#0b0b0b 42%,#050505 100%);display:flex;align-items:center;justify-content:center;padding:24px}
+    .wrap{width:100%;max-width:480px}
+    .card{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:28px;padding:28px 22px 22px;box-shadow:0 20px 80px rgba(0,0,0,.55)}
+    .card:before{content:"";position:absolute;inset:-80px -80px auto auto;width:180px;height:180px;background:radial-gradient(circle,rgba(214,173,90,.23),transparent 70%)}
+    .logo{display:block;width:156px;height:156px;object-fit:contain;margin:0 auto 12px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.55))}
+    .eyebrow{text-align:center;color:var(--gold2);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12px;margin:4px 0 10px}
+    h1{text-align:center;font-size:30px;line-height:1.08;margin:0 0 8px}
+    .sub{text-align:center;color:var(--muted);font-size:15px;line-height:1.45;margin:0 auto 22px;max-width:370px}
+    .btn{appearance:none;border:0;width:100%;border-radius:18px;padding:17px 18px;font-size:17px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17110a;box-shadow:0 12px 32px rgba(214,173,90,.22);display:flex;gap:10px;align-items:center;justify-content:center;text-decoration:none}
+    .btn.secondary{margin-top:10px;background:rgba(255,255,255,.055);color:var(--text);border:1px solid rgba(255,255,255,.12);box-shadow:none;font-weight:700}
+    .info{margin:20px 0 0;display:grid;gap:10px}
+    .row{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:13px 14px;color:var(--muted);font-size:14px}
+    .row strong{display:block;color:var(--text);font-size:15px;margin-bottom:3px}
+    .device{display:none;margin-top:16px;border:1px solid var(--line);background:rgba(214,173,90,.07);border-radius:18px;padding:14px;color:#e7dcc6;font-size:14px;line-height:1.45}
+    .device.show{display:block}
+    .toast{opacity:0;transform:translateY(8px);transition:.25s;position:fixed;left:20px;right:20px;bottom:22px;margin:auto;max-width:420px;background:#171717;border:1px solid var(--line);color:var(--text);border-radius:16px;padding:14px 16px;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.55);font-weight:700}
+    .toast.show{opacity:1;transform:translateY(0)}
+    .foot{text-align:center;color:#847c70;font-size:12px;margin-top:18px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <img class="logo" src="logo.png" alt="Barbearia do Ju" />
+      <div class="eyebrow">Contato oficial</div>
+      <h1>Salve nosso contato</h1>
+      <p class="sub">Tenha a Barbearia do Ju na sua agenda para chamar no WhatsApp, ver endereço, horário de atendimento e acessar nossos serviços.</p>
+      <button class="btn" id="saveBtn">📇 Salvar contato</button>
+      <a class="btn secondary" href="https://wa.me/5511967073038" rel="noopener">💬 Chamar no WhatsApp</a>
+      <a class="btn secondary" href="https://linktr.ee/barbeariadoju" rel="noopener">🌐 Conheça nossos serviços</a>
+      <div id="iosHelp" class="device"><strong>🍎 iPhone:</strong> depois de tocar em <b>Salvar contato</b>, abra o arquivo baixado e selecione <b>Adicionar Contato</b>.</div>
+      <div id="androidHelp" class="device"><strong>🤖 Android:</strong> toque em <b>Salvar contato</b> e confirme para adicionar na sua agenda.</div>
+      <div class="info">
+        <div class="row"><strong>Telefone / WhatsApp</strong>+55 11 96707-3038</div>
+        <div class="row"><strong>Endereço</strong>Rua Dr. Antônio da Cruz, 482 – Centro<br>Bragança Paulista – SP</div>
+        <div class="row"><strong>Atendimento</strong>Terça a sexta: 08h30 às 18h<br>Sábado: 08h30 às 14h</div>
+        <div class="row"><strong>Serviços</strong>Cortes masculinos, barba, barboterapia e atendimento personalizado.</div>
+      </div>
+      <div class="foot">Barbearia do Ju • Bragança Paulista</div>
+    </section>
+  </main>
+  <div class="toast" id="toast">Contato pronto para salvar.</div>
+<script>
+const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:do Ju;Barbearia;;;\nFN:Barbearia do Ju\nORG:Barbearia do Ju\nTITLE:Barbeiro Proprietário\nTEL;TYPE=CELL,WORK:+5511967073038\nADR;TYPE=WORK:;;Rua Dr. Antônio da Cruz, 482;Bragança Paulista;SP;12900350;Brasil\nURL:https://linktr.ee/barbeariadoju\nNOTE:Barbearia do Ju | Cortes masculinos, barba, barboterapia e atendimento personalizado. Ambiente climatizado, café e Wi-Fi para clientes. Atendimento: terça a sexta das 08h30 às 18h00 e sábado das 08h30 às 14h00. Agende pelo WhatsApp!\nEND:VCARD`;
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const isAndroid = /Android/.test(navigator.userAgent);
+if (isIOS) document.getElementById('iosHelp').classList.add('show');
+else if (isAndroid) document.getElementById('androidHelp').classList.add('show');
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
+document.getElementById('saveBtn').addEventListener('click',()=>{
+  const blob = new Blob([vcard], {type:'text/vcard;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Barbearia-do-Ju.vcf';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1200);
+  showToast(isIOS ? 'Arquivo baixado. Abra e toque em Adicionar Contato.' : 'Contato baixado. Confirme para salvar.');
+});
+</script>
+</body>
+</html>
