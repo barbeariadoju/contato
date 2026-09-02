@@ -1,57 +1,87 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Contato oficial | Barbearia do Ju</title>
-  <meta name="description" content="Salve o contato oficial da Barbearia do Ju no seu celular e acesse nossos canais." />
-  <style>
-    :root{--bg:#090909;--card:#151515;--gold:#d6ad5a;--gold2:#f2d28a;--text:#f7f2e8;--muted:#b8b0a4;--line:rgba(214,173,90,.25)}
-    *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top,#282014 0,#0b0b0b 42%,#050505 100%);display:flex;align-items:center;justify-content:center;padding:24px}
-    .wrap{width:100%;max-width:480px}
-    .card{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:28px;padding:28px 22px 22px;box-shadow:0 20px 80px rgba(0,0,0,.55)}
-    .card:before{content:"";position:absolute;inset:-80px -80px auto auto;width:180px;height:180px;background:radial-gradient(circle,rgba(214,173,90,.23),transparent 70%)}
-    .logo{display:block;width:100%;max-width:380px;height:auto;object-fit:contain;margin:0 auto 12px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.55))}
-    .eyebrow{text-align:center;color:var(--gold2);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12px;margin:4px 0 10px}
-    h1{text-align:center;font-size:30px;line-height:1.08;margin:0 0 8px}
-    .sub{text-align:center;color:var(--muted);font-size:15px;line-height:1.45;margin:0 auto 22px;max-width:370px}
-    .btn{appearance:none;border:0;width:100%;border-radius:18px;padding:17px 18px;font-size:17px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17110a;box-shadow:0 12px 32px rgba(214,173,90,.22);display:flex;gap:10px;align-items:center;justify-content:center;text-decoration:none}
-    .btn.secondary{margin-top:10px;background:rgba(255,255,255,.055);color:var(--text);border:1px solid rgba(255,255,255,.12);box-shadow:none;font-weight:700}
-    .info{margin:20px 0 0;display:grid;gap:10px}
-    .row{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:13px 14px;color:var(--muted);font-size:14px}
-    .row strong{display:block;color:var(--text);font-size:15px;margin-bottom:3px}
-    .device{display:none;margin-top:16px;border:1px solid var(--line);background:rgba(214,173,90,.07);border-radius:18px;padding:14px;color:#e7dcc6;font-size:14px;line-height:1.45}
-    .device.show{display:block}
-    .toast{opacity:0;transform:translateY(8px);transition:.25s;position:fixed;left:20px;right:20px;bottom:22px;margin:auto;max-width:420px;background:#171717;border:1px solid var(--line);color:var(--text);border-radius:16px;padding:14px 16px;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.55);font-weight:700}
-    .toast.show{opacity:1;transform:translateY(0)}
-    .foot{text-align:center;color:#847c70;font-size:12px;margin-top:18px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contato oficial | Barbearia do Ju</title>
+<meta name="description" content="Salve o contato oficial da Barbearia do Ju no seu celular e acesse nossos canais.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0b; --surface:#141210; --surface2:#1c1917;
+    --text:#f2ede4; --muted:#9c9184; --faint:#6e6559;
+    --gold:#c9a227; --gold-soft:#e2c15f; --rule:#2b2621;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding:0 20px 60px;
+  }
+  .wrap{max-width:560px;margin:0 auto}
+  header{text-align:center;padding:44px 0 8px}
+  header img.marca{width:min(240px,64vw);height:auto;margin-bottom:20px;border-radius:14px}
+  .eyebrow{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  h1{font-family:"Bebas Neue",Inter,sans-serif;font-weight:400;font-size:clamp(38px,10vw,54px);line-height:1;letter-spacing:.02em;margin-bottom:14px}
+  .sub{color:var(--muted);font-size:15.5px;max-width:44ch;margin:0 auto}
+  .actions{margin-top:34px;display:grid;gap:10px}
+  .btn{display:block;width:100%;border:0;border-radius:999px;padding:15px 18px;font-size:16px;font-weight:700;letter-spacing:.02em;cursor:pointer;color:#191400;background:var(--gold);text-decoration:none;text-align:center}
+  .btn:hover{background:var(--gold-soft)}
+  .btn.ghost{background:var(--surface);color:var(--text);border:1px solid var(--rule)}
+  .btn.ghost:hover{border-color:var(--gold)}
+  .device{display:none;margin-top:14px;border:1px solid var(--rule);border-left:3px solid var(--gold);background:var(--surface);border-radius:0 12px 12px 0;padding:14px 16px;color:var(--muted);font-size:14px;line-height:1.5}
+  .device.show{display:block}
+  .device strong{color:var(--text)}
+  h2{font-family:"Bebas Neue",Inter,sans-serif;font-weight:400;font-size:22px;letter-spacing:.08em;color:var(--gold);margin:38px 0 4px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+  .item{padding:13px 0;border-bottom:1px solid var(--rule)}
+  .item .rotulo{display:block;font-size:12.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+  .item .valor{font-size:15.5px}
+  footer{margin-top:46px;padding-top:24px;border-top:1px solid var(--rule);text-align:center;color:var(--faint);font-size:13.5px;line-height:1.7}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--gold)}
+  .toast{opacity:0;transform:translateY(120px);transition:.25s ease;position:fixed;left:50%;bottom:24px;transform-origin:center;background:var(--surface);border:1px solid var(--gold);color:var(--text);border-radius:999px;padding:13px 20px;text-align:center;box-shadow:0 18px 40px rgba(0,0,0,.5);font-weight:600;z-index:10;white-space:nowrap}
+  .toast.show{opacity:1;transform:translateY(0)}
+</style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card">
-      <img class="logo" src="logo.png" alt="Barbearia do Ju" />
-      <div class="eyebrow">Contato oficial</div>
-      <h1>Salve nosso contato</h1>
-      <p class="sub">Tenha a Barbearia do Ju na sua agenda para chamar no WhatsApp, ver endereço, horário de atendimento e acessar nossos serviços.</p>
-      <button class="btn" id="saveBtn">📇 Salvar contato</button>
-      <a class="btn secondary" href="https://wa.me/5511967073038" rel="noopener">💬 Chamar no WhatsApp</a>
-      <a class="btn secondary" href="https://www.fresha.com/pt/a/barbearia-do-ju-braganca-paulista-rua-doutor-antonio-da-cruz-482-1-rz1g8hql/booking?menu=true&share=true&pId=2840182&cartId=1a388785-8e37-4fa2-b62c-ec2de020215f" rel="noopener">🌐 Conheça nossos serviços</a>
-      <div id="iosHelp" class="device"><strong>🍎 iPhone:</strong> depois de tocar em <b>Salvar contato</b>, abra o arquivo baixado e selecione <b>Adicionar Contato</b>.</div>
-      <div id="androidHelp" class="device"><strong>🤖 Android:</strong> toque em <b>Salvar contato</b> e confirme para adicionar na sua agenda.</div>
-      <div class="info">
-        <div class="row"><strong>Telefone / WhatsApp</strong>+55 11 96707-3038</div>
-        <div class="row"><strong>Endereço</strong>Rua Dr. Antônio da Cruz, 482 – Centro<br>Bragança Paulista – SP</div>
-        <div class="row"><strong>Atendimento</strong>Terça a sexta: 08h30 às 18h<br>Sábado: 08h30 às 14h</div>
-        <div class="row"><strong>Serviços</strong>Cortes masculinos, barba, barboterapia e atendimento personalizado.</div>
-      </div>
-      <div class="foot">Barbearia do Ju • Bragança Paulista</div>
-    </section>
-  </main>
-  <div class="toast" id="toast">Contato pronto para salvar.</div>
+<div class="wrap">
+
+  <header>
+    <img class="marca" src="logo.png" alt="Barbearia do Ju">
+    <p class="eyebrow">Contato oficial</p>
+    <h1>Salve nosso contato</h1>
+    <p class="sub">Tenha a Barbearia do Ju na sua agenda para chamar no WhatsApp, ver endereço, horário de atendimento e conhecer nossos serviços.</p>
+  </header>
+
+  <div class="actions">
+    <button class="btn" id="saveBtn">Salvar contato</button>
+    <a class="btn ghost" href="https://wa.me/5511967073038" rel="noopener">Chamar no WhatsApp</a>
+    <a class="btn ghost" href="https://www.fresha.com/pt/a/barbearia-do-ju-braganca-paulista-rua-doutor-antonio-da-cruz-482-1-rz1g8hql/booking?menu=true&share=true&pId=2840182&cartId=1a388785-8e37-4fa2-b62c-ec2de020215f" rel="noopener">Conheça nossos serviços</a>
+    <div id="iosHelp" class="device"><strong>iPhone:</strong> depois de tocar em Salvar contato, abra o arquivo baixado e selecione Adicionar Contato.</div>
+    <div id="androidHelp" class="device"><strong>Android:</strong> toque em Salvar contato e confirme para adicionar na sua agenda.</div>
+  </div>
+
+  <h2>Informações</h2>
+  <div class="item"><span class="rotulo">Telefone / WhatsApp</span><span class="valor">+55 11 96707-3038</span></div>
+  <div class="item"><span class="rotulo">Endereço</span><span class="valor">Rua Dr. Antônio da Cruz, 482 — Centro — Bragança Paulista/SP</span></div>
+  <div class="item"><span class="rotulo">Atendimento</span><span class="valor">Terça a sexta, 8h às 19h · Sábado, 8h às 15h</span></div>
+  <div class="item"><span class="rotulo">Serviços</span><span class="valor">Cortes masculinos, barba, barboterapia e atendimento personalizado.</span></div>
+
+  <footer>
+    <a href="https://www.barbeariadoju.com.br/">barbeariadoju.com.br</a>
+  </footer>
+
+</div>
+
+<div class="toast" id="toast">Contato pronto para salvar.</div>
+
 <script>
-const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:do Ju;Barbearia;;;\nFN:Barbearia do Ju\nORG:Barbearia do Ju\nTITLE:Barbeiro Proprietário\nTEL;TYPE=CELL,WORK:+5511967073038\nADR;TYPE=WORK:;;Rua Dr. Antônio da Cruz, 482;Bragança Paulista;SP;12900350;Brasil\nURL:https://linktr.ee/barbeariadoju_\nNOTE:Barbearia do Ju | Cortes masculinos, barba, barboterapia e atendimento personalizado. Ambiente climatizado, café e Wi-Fi para clientes. Atendimento: terça a sexta das 08h30 às 18h00 e sábado das 08h30 às 14h00. Agende pelo WhatsApp!\nEND:VCARD`;
+const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:do Ju;Barbearia;;;\nFN:Barbearia do Ju\nORG:Barbearia do Ju\nTITLE:Barbeiro Proprietário\nTEL;TYPE=CELL,WORK:+5511967073038\nADR;TYPE=WORK:;;Rua Dr. Antônio da Cruz, 482;Bragança Paulista;SP;12900350;Brasil\nURL:https://linktr.ee/barbeariadoju_\nNOTE:Barbearia do Ju | Cortes masculinos, barba, barboterapia e atendimento personalizado. Ambiente climatizado, café e Wi-Fi para clientes. Atendimento: terça a sexta das 08h às 19h e sábado das 08h às 15h. Agende pelo WhatsApp!\nEND:VCARD`;
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 const isAndroid = /Android/.test(navigator.userAgent);
 if (isIOS) document.getElementById('iosHelp').classList.add('show');
